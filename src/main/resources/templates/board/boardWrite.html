@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://wwwthymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<link rel="stylesheet" th:href="@{/css/bootstrap.css}"></link>
+
+<script th:src="@{/js/jquery-3.5.1.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.js}"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>게시판 등록</h2>
+        </div>
+        <form action="/board/insertBoard.do" method="POST">
+            <div class="form-group">
+                <label for="text">제목</label>
+                <input type="text" id="title" name="title" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="createdId">아이디 : </label>
+                <input type="text" id="createdId" name="createdId" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="contents">내용 : </label>
+                <textarea name="contents" id="contents" cols="30" rows="10" class="form-control"></textarea>
+            </div>
+            <div class="d-flex justify-contents-end">
+            	<button class="btn btn-primary" type="submit">OK</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
